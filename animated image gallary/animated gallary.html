@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body{
+            background: linear-gradient(45deg,blue,yellow);
+        }
+        h1 {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 40px;
+            font-family: sans-serif;
+        }
+
+        .gallary {
+            height: 80%;
+            width: 100%;
+            display: flex;
+            margin: 5% auto 0;
+            box-sizing: border-box;
+        }
+
+        .image-box {
+            margin: 0 1%;
+            flex-grow: 1;
+            flex-basis: 0;
+            transition: .5s;
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: .5s;
+        }
+
+        .image-box:hover {
+            flex-basis: 50%;
+        }
+
+        .active {
+            flex-basis: 50%;
+        }
+
+        .gallary:hover .active {
+            flex-basis: 0;
+        }
+
+        .image-box:nth-child(1):hover {
+            flex-basis: 50%;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Animated Image Slider</title>
+</head>
+
+<body>
+    <h1>Animated Image Gallary</h1>
+    <div class="gallary">
+        <div class="image-box active">
+            <img src="cute-squirrel.jpg">
+        </div>
+        <div class="image-box">
+            <img src="Dream.jpg">
+        </div>
+        <div class="image-box">
+            <img src="green-lizard.jpg">
+        </div>
+        <div class="image-box">
+            <img src="squirrel.jpg">
+        </div>
+        <div class="image-box">
+            <img src="pigeon.jpg">
+        </div>
+    </div>
+</body>
+
+</html>
